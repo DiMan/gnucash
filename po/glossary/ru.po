@@ -1,14 +1,17 @@
-# translation of ru.po to russian
+#
+# Glossary of terms in GnuCash. Translation to Russian.
 # Copyright (C) 2008 Free Software Foundation, Inc.
 #
 # Sergey Belyashov <Sergey.Belyashov@gmail.com>, 2008.
+# Dmitriy Mangul <dimang.freetime@gmail.com>, 2017, 2018
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2017-10-20 19:04+0200\n"
-"PO-Revision-Date: 2008-01-30 00:10+0300\n"
-"Last-Translator: Sergey Belyashov <Sergey.Belyashov@gmail.com>\n"
-"Language-Team: russian <ru@li.org>\n"
+"POT-Creation-Date: 2018-01-24 21:18+0100\n"
+"PO-Revision-Date: 2018-01-24 00:00+0300\n"
+"Last-Translator: Dmitriy Mangul <dimang.freetime@gmail.com>\n"
+"Language-Team: <gnucash-ru@googlegroups.com>\n"
 "Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,14 +25,16 @@ msgstr ""
 #. "English Definition (Dear translator: This file will never be visible to the user! It should only serve as a tool for you, the translator. Nothing more.)"
 msgid "Term (Dear translator: This file will never be visible to the user!)"
 msgstr ""
+"термин (Уважаемый переводчик: Этот файл никогда не будет виден для "
+"пользователя!)"
 
 #. "A detailed record of money spent and received"
 msgid "account"
-msgstr "счет"
+msgstr "счёт"
 
 #. "-"
 msgid "account code"
-msgstr "код счета"
+msgstr "номер счёта"
 
 #. "the tree view of all accounts"
 msgid "account hierarchy"
@@ -37,25 +42,23 @@ msgstr "иерархия счетов"
 
 #. "-"
 msgid "account name"
-msgstr "название счета"
+msgstr "название счёта"
 
 #. "The left side of the balance sheet in T account form shows the application of funds in form of assets. Because it contains only assets use assets directly. Complement: Passive. See also: Report Form"
-#, fuzzy
 msgid "account type: Active"
-msgstr "account type: Актив"
+msgstr "account type: Активы"
 
 #. "A thing, esp. owned by a person or company, that has value and can be used or sold to pay debts. Dependent on the context you might use 'account type: Active' instead."
 msgid "account type: Asset"
-msgstr "account type: Актив"
+msgstr "account type: Активы"
 
 #. "in fact: 'Active & Passive', group aka 'Balance Sheet accounts'; complement of 'Profit & Loss'"
-#, fuzzy
 msgid "account type: Assets & Liabilities"
-msgstr "account type: Обязательства"
+msgstr "account type: Активы и Обязательства"
 
 #. "(esp. US) (Brit = current account) a bank account from which money can be withdrawn without previous notice"
 msgid "account type: checking"
-msgstr "account type: чеки"
+msgstr "account type: текущий счёт"
 
 #. "-"
 msgid "account type: currency"
@@ -86,39 +89,41 @@ msgid "account type: Mutual fund"
 msgstr "account type: Взаимный фонд"
 
 #. "The right side of the balance sheet in T account form shows the source of funds and contains equity & liability. While not common in english, most languages would translate 'equity & liability' with 'passive'. Complement: Active. See also: Report Form Implementation: https://bugzilla.gnome.org/show_bug.cgi?id=421766"
-#, fuzzy
 msgid "account type: Passive"
-msgstr "account type: Актив"
+msgstr "account type: Пассивы"
 
 #. "Group of accounts tracking your success, complement of 'Assets & Liabilities'"
-#, fuzzy
 msgid "account type: Profit & Loss"
-msgstr "account type: Актив"
+msgstr "account type: Прибыль и убытки"
 
 #. "1. (US) any type of account that earns interest 2. (Brit) any type of bank account that earns a higher level of interest than a current account or deposit account"
 msgid "account type: saving"
-msgstr "account type: депозит"
+msgstr "account type: депозитный счёт"
 
+# Размещение денег во вклад подразумевает под собой открытие специального
+# счёта, который имеет особые функции, отличающиеся от функций обычного -
+# текущего счёта. Такой счёт называется депозитным. В отличие от текущего, 
+# депозитный счёт нельзя использовать для расчетов, переводов денег, 
+# совершения покупок и других целей.
 #. "-"
 msgid "account type: Stock"
-msgstr "account type: Пакет акций"
+msgstr "account type: пакет акций"
 
 #. "This account type (new in gnucash-2.4.0) is used when exchanging or trading amounts from one currency into another"
-#, fuzzy
 msgid "account type: trading"
-msgstr "account type: депозит"
+msgstr "account type: валютный счёт"
 
 #. "-"
 msgid "account: parent account"
-msgstr "account: родительский счет"
+msgstr "account: родительский счёт"
 
 #. "-"
 msgid "account: subaccount"
-msgstr "account: субсчет"
+msgstr "account: субсчёт"
 
 #. "-"
 msgid "account: top level account"
-msgstr "account: счет верхнего уровня"
+msgstr "account: счёт верхнего уровня"
 
 #. "The process of doing something that caused a transaction to happen"
 msgid "Action (register)"
@@ -140,6 +145,7 @@ msgstr "action: покупка"
 msgid "action: deposit"
 msgstr "action: депозит"
 
+# TODO: add translation
 #. "When people can automatically deduct money straight from your account. The reverse of Direct Deposit."
 msgid "action: direct debit"
 msgstr ""
@@ -168,6 +174,7 @@ msgstr "action: займ"
 msgid "action: payment"
 msgstr "action: платеж"
 
+# TODO: add translation
 #. "Point of sale"
 msgid "action: POS"
 msgstr ""
@@ -180,6 +187,7 @@ msgstr "action: скидка"
 msgid "action: sell"
 msgstr "action: продажа"
 
+# TODO: add translation
 #. "-"
 msgid "action: Teller"
 msgstr ""
@@ -188,13 +196,14 @@ msgstr ""
 msgid "action: transfer"
 msgstr "action: перевод"
 
+# TODO: add translation
 #. "-"
 msgid "action: wire"
 msgstr ""
 
 #. "-"
 msgid "action: withdraw"
-msgstr "action: отзыв"
+msgstr "action: отзыв / снятие (денег)"
 
 #. "A sum of money"
 msgid "amount"
@@ -243,7 +252,7 @@ msgstr "закрытие книги"
 
 #. "An estimate or plan of the money available to somebody and how it will be spent over a period of time."
 msgid "Budget"
-msgstr "Бюджет"
+msgstr "бюджет"
 
 #. "-"
 msgid "business (adjective)"
@@ -254,13 +263,12 @@ msgid "business (noun)"
 msgstr "деятельность"
 
 #. "Profits made from the sale of investments or property"
-#, fuzzy
 msgid "capital gains"
 msgstr "доходы от прироста капитала"
 
 #. "Distinguishing the uppercase and lowercase letters"
 msgid "case sensitive"
-msgstr "регистрозависимый"
+msgstr "регистрозависимый / чувствителен к регистру букв"
 
 #. "Money in coins or notes"
 msgid "cash"
@@ -296,9 +304,8 @@ msgid "commodity option: Symbol"
 msgstr "commodity option: Обозначение"
 
 #. "interest which is earned on both the initial deposit and on any interest that has already been earned but left on deposit."
-#, fuzzy
 msgid "compound interests"
-msgstr "процент"
+msgstr "сложные проценты / компаундинг"
 
 #. "(a) A sum of money paid into an account. (b) A record of such a payment. (c) The state of having money in one's bank account."
 msgid "Credit (column in register)"
@@ -324,7 +331,7 @@ msgstr "валюта"
 #. "Custom print format (i.e. according to the user's wishes) as opposed to a template choice."
 #, fuzzy
 msgid "Custom"
-msgstr "Настроенный"
+msgstr "настроенный / пользовательский"
 
 #. "The backend where the data is stored."
 msgid "database"
@@ -364,13 +371,13 @@ msgid "Description (column in register)"
 msgstr "Описание"
 
 #. "Reductions to a basic price of goods or services. Your language might distinguish between discounts dealing with payments (billing terms) and others (invoice)."
-#, fuzzy
 msgid "discount"
-msgstr "счет"
+msgstr "скидка"
 
+# For more info see https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system
 #. "Important Buzzword :)"
 msgid "double entry"
-msgstr "двойная бухгалтерия"
+msgstr "двойная запись"
 
 #. "a person who works for somebody or a company in return for wages"
 msgid "employee"
@@ -435,7 +442,7 @@ msgstr "процент"
 
 #. "A list of goods sold or services provided together with the prices charged; see also: a bill. In Gnucash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
 msgid "invoice"
-msgstr "счет-фактура"
+msgstr "счёт-фактура"
 
 #. "In business accounting: Jobs are a mechanism by which you can group multiple invoices or bills that belong to the same customer or vendor. The job describes a (larger) piece of work or a task undertaken on order, for which one or many invoices or bills will be issued."
 msgid "job"
@@ -443,7 +450,7 @@ msgstr "операция"
 
 #. "A book in which a bank, business firm, etc. records its financial accounts"
 msgid "ledger"
-msgstr "бухгалтерская книга"
+msgstr "бухгалтерская книга / бухгалтерский журнал"
 
 #. "The heading for the right side of the balance sheet. See also: Equity."
 #, fuzzy
@@ -498,7 +505,7 @@ msgstr "национальная валюта"
 
 #. "(of money) remaining when nothing more is to be taken away"
 msgid "net"
-msgstr "белые"
+msgstr "чистые"
 
 #. "net total of all assets"
 msgid "net assets"
@@ -616,7 +623,7 @@ msgstr ""
 
 #. "-"
 msgid "rebalance, to (a transaction)"
-msgstr ""
+msgstr "свести баланс"
 
 #. "reconcile an account, a reconciled split. To find a way to make the bank's account statement agree with the user's recorded transactions in an account."
 msgid "reconcile, to"
@@ -632,7 +639,7 @@ msgstr "реестр"
 
 #. "A transaction that is divided into two or more parts"
 msgid "register entry: split transaction"
-msgstr "register entry: разделенная проводка"
+msgstr "register entry: разделённая проводка"
 
 #. "-"
 msgid "register entry: stock split"
@@ -684,7 +691,7 @@ msgstr "сохранить"
 
 #. "A transaction or reminder of a transaction that can be automatically executed at a specific time. It can be executed either once, or several times at regular intervals."
 msgid "Scheduled Transaction"
-msgstr "Плановая проводка"
+msgstr "плановая проводка"
 
 #. "DEPRECATED. To repair unbalanced transactions and orphan splits in an account tree. Any transactions that have debits != credits will get a balancing split added (pointing to a special new account called 'Imbalance'). Any splits that do not have accounts are put into another special account called 'Orphan'. Deprecated - use the term 'to check and repair' now."
 msgid "scrub, to"
@@ -721,7 +728,7 @@ msgstr "предварительный итог"
 #. "On the government's tax forms, the tax code identifies the given line or place on the form where certain amounts must be specified according to the current country's legislation"
 #, fuzzy
 msgid "tax code"
-msgstr "информация о налоге"
+msgstr "налоговый номер"
 
 #. "field of an account"
 #, fuzzy
@@ -791,7 +798,7 @@ msgstr "единицы"
 
 #. "-"
 msgid "URL"
-msgstr ""
+msgstr "Ссылка"
 
 #. "The worth of sth in terms of money or other commodities for which it can be exchanged"
 msgid "value (in a split)"
@@ -809,7 +816,6 @@ msgstr "товарный чек"
 msgid "withdraw (in the reconcile dialog)"
 msgstr "снятие"
 
-#, fuzzy
 #~ msgid "invoice owner"
 #~ msgstr "счет-фактура"
 
