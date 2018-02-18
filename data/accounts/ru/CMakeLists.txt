@@ -1,7 +1,10 @@
 SET(account_DATA
+  acctchrt_carloan.gnucash-xea
   acctchrt_common.gnucash-xea
+  acctchrt_eduloan.gnucash-xea
   acctchrt_homeloan.gnucash-xea
   acctchrt_homeown.gnucash-xea
+  acctchrt_otherloan.gnucash-xea
   acctchrt_renter.gnucash-xea)
 
 SET_DIST_LIST(RU_DIST ${account_DATA} CMakeLists.txt)

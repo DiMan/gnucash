@@ -22,7 +22,7 @@
   <act:type>ASSET</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Активы</act:description>
   <act:parent type="new">1972cce2e2364f95b2b0bc014502661d</act:parent>
@@ -39,7 +39,7 @@
   <act:type>ASSET</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Текущие активы</act:description>
   <act:parent type="new">98f262dfab9a2b99ac42919dcf58d304</act:parent>
@@ -56,7 +56,7 @@
   <act:type>BANK</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Чековый счет</act:description>
   <act:parent type="new">a1dd5f225156f110689c204fefded0ab</act:parent>
@@ -67,7 +67,7 @@
   <act:type>BANK</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Депозитный счет</act:description>
   <act:parent type="new">a1dd5f225156f110689c204fefded0ab</act:parent>
@@ -78,18 +78,18 @@
   <act:type>CASH</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Наличные</act:description>
   <act:parent type="new">a1dd5f225156f110689c204fefded0ab</act:parent>
 </gnc:account>
 <gnc:account version="2.0.0">
-  <act:name>Долги</act:name>
+  <act:name>Обязательства</act:name>
   <act:id type="new">19a911feed9b41b8b01be036a2aed9fe</act:id>
   <act:type>LIABILITY</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Долги</act:description>
   <act:parent type="new">1972cce2e2364f95b2b0bc014502661d</act:parent>
@@ -106,7 +106,7 @@
   <act:type>CREDIT</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Кредитная карта</act:description>
   <act:parent type="new">19a911feed9b41b8b01be036a2aed9fe</act:parent>
@@ -117,7 +117,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Доходы</act:description>
   <act:parent type="new">1972cce2e2364f95b2b0bc014502661d</act:parent>
@@ -134,7 +134,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Премия</act:description>
   <act:parent type="new">a7ab23dd2d41616042034d5a012a0850</act:parent>
@@ -145,7 +145,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Полученные подарки</act:description>
   <act:parent type="new">a7ab23dd2d41616042034d5a012a0850</act:parent>
@@ -156,7 +156,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Процентный доход</act:description>
   <act:parent type="new">a7ab23dd2d41616042034d5a012a0850</act:parent>
@@ -167,7 +167,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Чековые проценты</act:description>
   <act:parent type="new">c47361e40d9478ec11758097e64d693c</act:parent>
@@ -178,7 +178,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Другие доходы с процентов</act:description>
   <act:parent type="new">c47361e40d9478ec11758097e64d693c</act:parent>
@@ -189,7 +189,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Депозитные проценты</act:description>
   <act:parent type="new">c47361e40d9478ec11758097e64d693c</act:parent>
@@ -200,7 +200,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Другие доходы</act:description>
   <act:parent type="new">a7ab23dd2d41616042034d5a012a0850</act:parent>
@@ -211,7 +211,7 @@
   <act:type>INCOME</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Заработная плата</act:description>
   <act:parent type="new">a7ab23dd2d41616042034d5a012a0850</act:parent>
@@ -222,7 +222,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Расходы</act:description>
   <act:parent type="new">1972cce2e2364f95b2b0bc014502661d</act:parent>
@@ -239,7 +239,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Корректировка</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -250,7 +250,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Расходы на автомобиль</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -261,7 +261,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Сборы</act:description>
   <act:parent type="new">56df186f1ce6114ddca7b9e5d03af390</act:parent>
@@ -272,7 +272,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Топливо</act:description>
   <act:parent type="new">56df186f1ce6114ddca7b9e5d03af390</act:parent>
@@ -283,7 +283,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Парковка</act:description>
   <act:parent type="new">56df186f1ce6114ddca7b9e5d03af390</act:parent>
@@ -294,7 +294,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Ремонт и обслуживание</act:description>
   <act:parent type="new">56df186f1ce6114ddca7b9e5d03af390</act:parent>
@@ -305,7 +305,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Банковское обслуживание</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -316,7 +316,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Книги</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -327,7 +327,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Кабельное телевидение</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -338,7 +338,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Благотворительность</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -349,7 +349,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Одежда</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -360,7 +360,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Компьютер</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -371,7 +371,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Обеды</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -382,7 +382,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Учёба</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -393,7 +393,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Развлечения</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -404,7 +404,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Музыка и кино</act:description>
   <act:parent type="new">0ebd1d5f40d9e9e8bb1a4bf539650dd1</act:parent>
@@ -415,7 +415,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Отдых</act:description>
   <act:parent type="new">0ebd1d5f40d9e9e8bb1a4bf539650dd1</act:parent>
@@ -426,7 +426,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Путешествия</act:description>
   <act:parent type="new">0ebd1d5f40d9e9e8bb1a4bf539650dd1</act:parent>
@@ -437,7 +437,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Подарки</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -448,7 +448,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Хозтовары</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -459,7 +459,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Хобби</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -470,7 +470,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Страхование</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -481,7 +481,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Автостраховка</act:description>
   <act:parent type="new">5bda5ff833bc395dc1b00f95c66ce555</act:parent>
@@ -492,7 +492,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Медстраховка</act:description>
   <act:parent type="new">5bda5ff833bc395dc1b00f95c66ce555</act:parent>
@@ -503,7 +503,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Страхование жизни</act:description>
   <act:parent type="new">5bda5ff833bc395dc1b00f95c66ce555</act:parent>
@@ -514,7 +514,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Химчистка/прачечная</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -525,7 +525,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Медицинские расходы</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -536,7 +536,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Разное</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -547,7 +547,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Интернет услуги</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -558,7 +558,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Телефон</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -569,7 +569,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Общественный транспорт</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -580,7 +580,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Подписки</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -591,7 +591,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Питание</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -602,7 +602,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Налоги</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -613,7 +613,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Федеральные</act:description>
   <act:parent type="new">2c53a8a0c8b36f7de3f4052653886c2b</act:parent>
@@ -624,7 +624,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Medicare</act:description>
   <act:parent type="new">2c53a8a0c8b36f7de3f4052653886c2b</act:parent>
@@ -635,7 +635,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Другие налоги</act:description>
   <act:parent type="new">2c53a8a0c8b36f7de3f4052653886c2b</act:parent>
@@ -646,7 +646,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Общественная безопасность</act:description>
   <act:parent type="new">2c53a8a0c8b36f7de3f4052653886c2b</act:parent>
@@ -657,7 +657,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Региональные</act:description>
   <act:parent type="new">2c53a8a0c8b36f7de3f4052653886c2b</act:parent>
@@ -668,7 +668,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Коммунальные услуги</act:description>
   <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
@@ -679,7 +679,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Электричество</act:description>
   <act:parent type="new">57635fa5f71dee8ffc207c277250e773</act:parent>
@@ -690,7 +690,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Вывоз мусора</act:description>
   <act:parent type="new">57635fa5f71dee8ffc207c277250e773</act:parent>
@@ -701,7 +701,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Газ</act:description>
   <act:parent type="new">57635fa5f71dee8ffc207c277250e773</act:parent>
@@ -712,7 +712,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Вода</act:description>
   <act:parent type="new">57635fa5f71dee8ffc207c277250e773</act:parent>
@@ -723,7 +723,7 @@
   <act:type>EQUITY</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Собственные средства</act:description>
   <act:parent type="new">1972cce2e2364f95b2b0bc014502661d</act:parent>
@@ -740,7 +740,7 @@
   <act:type>EQUITY</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Остаток средств на начало периода</act:description>
   <act:parent type="new">3ab6a6d97b216c11333e48aa2b749a91</act:parent>

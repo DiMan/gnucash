@@ -21,7 +21,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Расходы</act:description>
   <act:slots>
@@ -38,7 +38,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Страхование</act:description>
   <act:parent type="new">9a2b4520f113372f4e576f5b6dc129c6</act:parent>
@@ -49,7 +49,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Страховка аренды</act:description>
   <act:parent type="new">b79b231807a98cd562c46cf0454e9f25</act:parent>
@@ -60,7 +60,7 @@
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
-    <cmdty:id>USD</cmdty:id>
+    <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Арендная плата</act:description>
   <act:parent type="new">9a2b4520f113372f4e576f5b6dc129c6</act:parent>
