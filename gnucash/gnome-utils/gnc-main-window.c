@@ -2943,11 +2943,11 @@ gnc_main_window_open_page (GncMainWindow *window,
     if (width != 0)
     {
         if (g_utf8_strlen (lab_text, -1) < width)
-            gtk_label_set_width_chars (GTK_LABEL(label), strlen (lab_text));
+            gtk_label_set_width_chars (GTK_LABEL(label), g_utf8_strlen (lab_text, -1));
         else
             gtk_label_set_width_chars (GTK_LABEL(label), width);
 
-        gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_MIDDLE);
+        gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_END);
     }
     gtk_widget_show (label);
 
