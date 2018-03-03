@@ -7,8 +7,9 @@
       Расходы на аренду недвижимости
     </gnc-act:short-description>
     <gnc-act:long-description>
-      Счета для учёта расходов связанных с арендой дома, квартиры или другой недвижимости.
-  </gnc-act:long-description>    
+      Счета для учёта расходов связанных с арендой дома или квартиры.
+    </gnc-act:long-description>
+
 <gnc:account version="2.0.0">
   <act:name>Root Account</act:name>
   <act:id type="new">1972cce2e2364f95b2b0bc014502661d</act:id>
@@ -60,6 +61,7 @@
   <act:description>Арендная плата</act:description>
   <act:parent type="new">19931e1ab10d980a9209aecab4665a54</act:parent>
 </gnc:account>
+
 </gnc-account-example>
 
 <!-- Local variables: -->

@@ -7,8 +7,9 @@
       Расходы на детей
     </gnc-act:short-description>
     <gnc-act:long-description>
-      Счета для учёта расходов связанных с детьми
-  </gnc-act:long-description>    
+      Счета для учёта расходов связанных с детьми.
+    </gnc-act:long-description>
+
 <gnc:account version="2.0.0">
   <act:name>Root Account</act:name>
   <act:id type="new">1972cce2e2364f95b2b0bc014502661d</act:id>
@@ -116,6 +117,7 @@
   <act:description>Детский сад</act:description>
   <act:parent type="new">e9b6215bdeb5cc092ca0059a7c9d97a7</act:parent>
 </gnc:account>
+
 </gnc-account-example>
 
 <!-- Local variables: -->

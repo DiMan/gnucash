@@ -7046,7 +7046,7 @@ msgstr ""
 "Здесь вы можете выбрать набор счетов, которые вам подходят. После того, "
 "как вы закончите работать с мастером, вы сможете в любое время добавить, "
 "переименовывать, изменить или удалить созданные счета. А также вы сможете "
-"добавить субсчета, и переместить счета (вместе со своими субсчетами) от "
+"добавить субсчета и переместить счета (вместе со своими субсчетами) от "
 "одного родительского счета к другому.\n"
 "\n"
 "Нажмите \"Отмена\", если вы не хотите сейчас создавать новые счета."
@@ -7108,7 +7108,7 @@ msgstr "<b>Описание категории</b>"
 
 #: ../gnucash/gnome/gtkbuilder/assistant-hierarchy.glade.h:18
 msgid "Choose accounts to create"
-msgstr "Выбор счетов для создания"
+msgstr "Выбор создаваемых счетов"
 
 #: ../gnucash/gnome/gtkbuilder/assistant-hierarchy.glade.h:19
 msgid ""
@@ -17013,7 +17013,6 @@ msgstr ""
 "\"Назад\", или отменить экспорт, нажав на кнопку \"Отмена\".\n"
 
 #: ../gnucash/import-export/csv-exp/assistant-csv-export.c:95
-#, fuzzy
 msgid ""
 "This assistant will help you export the Account Tree to a file\n"
 " with the separator specified below.\n"
@@ -17021,10 +17020,11 @@ msgid ""
 "Select the settings you require for the file and then click 'Forward' to "
 "proceed or 'Cancel' to Abort Export.\n"
 msgstr ""
-"Этот мастер поможет вам экспортировать иерархию счетов в файл.\n"
+"Этот мастер поможет вам экспортировать иерархию счетов в файл с указанным "
+"ниже разделителем.\n"
 "\n"
-"Установите требуемые параметры экспорта и затем нажмите на кнопку \"Вперёд\" "
-"или нажмите \"Отмена\", чтобы прервать экспорт.\n"
+"Установите требуемые параметры экспорта и затем нажмите \"Вперёд\", чтобы "
+"продолжить, или нажмите \"Отмена\", чтобы прервать экспорт.\n"
 
 #: ../gnucash/import-export/csv-exp/assistant-csv-export.c:101
 msgid ""
@@ -17141,7 +17141,7 @@ msgid ""
 "Enter file name and location for the Export...\n"
 msgstr ""
 "\n"
-"Введите имя файла и его расположение для экспорта...\n"
+"Введите имя файла и место его расположения для экспорта...\n"
 
 #: ../gnucash/import-export/csv-exp/assistant-csv-export.glade.h:34
 msgid "Choose File Name for Export"

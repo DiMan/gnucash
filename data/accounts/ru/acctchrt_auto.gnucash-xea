@@ -8,14 +8,14 @@
     </gnc-act:short-description>
     <gnc-act:long-description>
       Счета для учёта расходов связанных с автомобилем.
-  </gnc-act:long-description>    
-  <gnc-act:start-selected>1</gnc-act:start-selected>
+    </gnc-act:long-description>
+
 <gnc:account version="2.0.0">
   <act:name>Головной счет</act:name>
   <act:id type="new">1972cce2e2364f95b2b0bc014502661d</act:id>
   <act:type>ROOT</act:type>
   <act:commodity-scu>0</act:commodity-scu>
-</gnc:account>
+</gnc:account> 
 <gnc:account version="2.0.0">
   <act:name>Расходы</act:name>
   <act:id type="new">1884bbd7394883ebafec8b9e2eb091a4</act:id>
@@ -138,6 +138,7 @@
   <act:description>Страхование автотранспорта</act:description>
   <act:parent type="new">56df186f1ce6114ddca7b9e5d03af390</act:parent>
 </gnc:account>
+
 </gnc-account-example>
 
 <!-- Local variables: -->
