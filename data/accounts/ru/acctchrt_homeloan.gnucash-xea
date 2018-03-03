@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnc-account-example>
     <gnc-act:title>
-      Кредит на ипотеку
+      Кредит на недвижимость
     </gnc-act:title>
     <gnc-act:short-description>
-      Счета ипотечного кредита и связанных с ним платежей
+      Кредит на недвижимость
     </gnc-act:short-description>
     <gnc-act:long-description>
-      Вы можете выбрать этот набор счетов, если взяли ссуду на дом (ипотечный займ, ипотечные выплаты).
+      Счета для учёта расходов связанных с оплатой кредита на недвижимость..
   </gnc-act:long-description>    
 <gnc:account version="2.0.0">
   <act:name>Root Account</act:name>
@@ -62,7 +62,7 @@
 </gnc:account>
 <gnc:account version="2.0.0">
   <act:name>Расходы</act:name>
-  <act:id type="new">2f076f5ae073173a11d33420cd39fa4d</act:id>
+  <act:id type="new">1884bbd7394883ebafec8b9e2eb091a4</act:id>
   <act:type>EXPENSE</act:type>
   <act:commodity>
     <cmdty:space>ISO4217</cmdty:space>
@@ -86,10 +86,16 @@
     <cmdty:id>RUB</cmdty:id>
   </act:commodity>
   <act:description>Проценты</act:description>
-  <act:parent type="new">2f076f5ae073173a11d33420cd39fa4d</act:parent>
+  <act:parent type="new">1884bbd7394883ebafec8b9e2eb091a4</act:parent>
+  <act:slots>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
 </gnc:account>
 <gnc:account version="2.0.0">
-  <act:name>Кредит на ипотеку</act:name>
+  <act:name>Ипотечный кредит</act:name>
   <act:id type="new">c1e23fa813d3c8c4a8ea1228a7615b79</act:id>
   <act:type>EXPENSE</act:type>
   <act:commodity>

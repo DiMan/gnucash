@@ -1,9 +1,10 @@
 SET(account_DATA
-  acctchrt_carloan.gnucash-xea
+  acctchrt_auto.gnucash-xea
+  acctchrt_autoloan.gnucash-xea
   acctchrt_common.gnucash-xea
-  acctchrt_eduloan.gnucash-xea
-  acctchrt_homeloan.gnucash-xea
   acctchrt_homeown.gnucash-xea
+  acctchrt_homeloan.gnucash-xea
+  acctchrt_kids.gnucash-xea
   acctchrt_otherloan.gnucash-xea
   acctchrt_renter.gnucash-xea)
 
