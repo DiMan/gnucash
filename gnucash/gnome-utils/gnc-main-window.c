@@ -2047,6 +2047,8 @@ gnc_main_window_update_tab_width_one_page (GncPluginPage *page,
     gint *new_value = user_data;
     GtkWidget *label;
     const gchar *lab_text;
+    gint len_1;
+    gint len_2;
 
     ENTER("page %p, visible %d", page, *new_value);
     label = g_object_get_data(G_OBJECT (page), PLUGIN_PAGE_TAB_LABEL);
@@ -2058,17 +2060,33 @@ gnc_main_window_update_tab_width_one_page (GncPluginPage *page,
 
     lab_text = gtk_label_get_text (GTK_LABEL(label));
 
+    len_1 = g_utf8_strlen(lab_text, -1);
+    len_2 = strlen(lab_text);
+    g_print("--- gnc_main_window_update_tab_width_one_page: '%s', Länge (%d, %d), Begrenzung: %d \n", lab_text, len_1, len_2, *new_value);
+    //g_warning();
+    //g_print(lab_text);
+    //g_print("-\n");
+    
     if (*new_value != 0)
     {
+        g_print("if (*new_value != 0) |=> true \n");
         if (g_utf8_strlen (lab_text, -1) < *new_value)
-            gtk_label_set_width_chars (GTK_LABEL(label), strlen (lab_text));
+        {
+            g_print("if (g_utf8_strlen (lab_text, -1) < *new_value) |=> true \n");
+            gtk_label_set_width_chars (GTK_LABEL(label), g_utf8_strlen (lab_text, -1) + 1);
+        }
         else
+        {
+            g_print("if (g_utf8_strlen (lab_text, -1) < *new_value) |=> false \n");
             gtk_label_set_width_chars (GTK_LABEL(label), *new_value);
+        }
 
         gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_MIDDLE);
+        //gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_NONE);
     }
     else
     {
+        g_print("if (*new_value != 0) |=> false \n");
         gtk_label_set_width_chars (GTK_LABEL(label), 15);
         gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_NONE);
     }
@@ -2890,6 +2908,8 @@ gnc_main_window_open_page (GncMainWindow *window,
     GtkWidget *image;
     GList *tmp;
     gint width;
+    gint len_1;
+    gint len_2;
 
     ENTER("window %p, page %p", window, page);
     if (window)
@@ -2940,14 +2960,29 @@ gnc_main_window_open_page (GncMainWindow *window,
     label = gtk_label_new (lab_text);
     g_object_set_data (G_OBJECT (page), PLUGIN_PAGE_TAB_LABEL, label);
 
+
+    len_1 = g_utf8_strlen (lab_text, -1);
+    len_2 = strlen (lab_text);
+    g_print("--- gnc_main_window_open_page: '%s', Länge (%d, %d), Begrenzung: %d \n", lab_text, len_1, len_2, width);
+    // g_warning();
+    //g_print(lab_text);
+    //g_print("-\n");
+
     if (width != 0)
     {
-        if (g_utf8_strlen (lab_text, -1) < width)
+        g_print("if (width != 0) |=> true \n");
+        if (g_utf8_strlen (lab_text, -1) < width) 
+        {
+            g_print("if (g_utf8_strlen (lab_text, -1) < width)  |=> true \n");
             gtk_label_set_width_chars (GTK_LABEL(label), g_utf8_strlen (lab_text, -1));
+        }
         else
+        {
+            g_print("if (g_utf8_strlen (lab_text, -1) < width)  |=> false \n");
             gtk_label_set_width_chars (GTK_LABEL(label), width);
+        }
 
-        gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_END);
+        gtk_label_set_ellipsize(GTK_LABEL(label), PANGO_ELLIPSIZE_MIDDLE);
     }
     gtk_widget_show (label);
 
