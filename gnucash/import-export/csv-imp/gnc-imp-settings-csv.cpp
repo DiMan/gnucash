@@ -1,5 +1,5 @@
 /*******************************************************************\
- * gnc-csv-import-settings.cpp -- Save and Load CSV Import Settings *
+ * gnc-imp-settings-csv.cpp -- Save and Load CSV Import Settings *
  *                                                                  *
  * Copyright (C) 2014 Robert Fewell                                 *
  *                                                                  *
@@ -20,13 +20,13 @@
  * 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652       *
  * Boston, MA  02110-1301,  USA       gnu@gnu.org                   *
 \********************************************************************/
-/** @file gnc-csv-import-settings.cpp
+/** @file gnc-imp-settings-csv.cpp
     @brief CSV Import Settings
     @author Copyright (c) 2014 Robert Fewell
     @author Copyright (c) 2016 Geert Janssens
 */
 
-#include "gnc-csv-import-settings.hpp"
+#include "gnc-imp-settings-csv.hpp"
 #include <sstream>
 
 extern "C"
@@ -106,22 +106,17 @@ std::string get_gnc_exp (void)
     return gnc_exp;
 }
 
-std::string get_prefix (void)
-{
-    return csv_group_prefix;
-}
-
 /**************************************************
  * load_common
  *
  * load the settings from a state key file
  **************************************************/
 bool
-CsvImportSettings::load_common (void)
+CsvImportSettings::load (void)
 {
     GError *key_error = nullptr;
     m_load_error = false;
-    auto group = csv_group_prefix + m_settings_type + " - " + m_name;
+    auto group = get_group_prefix() + m_name;
     auto keyfile = gnc_state_get_current ();
 
     m_skip_start_lines = g_key_file_get_integer (keyfile, group.c_str(), CSV_SKIP_START, &key_error);
@@ -186,10 +181,10 @@ CsvImportSettings::load_common (void)
  * save settings to a key file
  **************************************************/
 bool
-CsvImportSettings::save_common (void)
+CsvImportSettings::save (void)
 {
     auto keyfile = gnc_state_get_current ();
-    auto group = csv_group_prefix + m_settings_type + " - " + m_name;
+    auto group = get_group_prefix() + m_name;
 
     // Start Saving the Common settings
     g_key_file_set_string (keyfile, group.c_str(), CSV_NAME, m_name.c_str());
@@ -240,9 +235,9 @@ CsvImportSettings::save_common (void)
 }
 
 void
-CsvImportSettings::remove_common (void)
+CsvImportSettings::remove (void)
 {
     auto keyfile = gnc_state_get_current ();
-    auto group = csv_group_prefix + m_settings_type + " - " + m_name;
+    auto group = get_group_prefix() + m_name;
     g_key_file_remove_group (keyfile, group.c_str(), nullptr);
 }

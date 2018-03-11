@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-tx-import.cpp - import transactions from csv or fixed-width  *
+ * gnc-import-tx.cpp - import transactions from csv or fixed-width  *
  *                     files                                        *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -35,11 +35,11 @@ extern "C" {
 #include <boost/regex.hpp>
 #include <boost/regex/icu.hpp>
 
-#include "gnc-tx-import.hpp"
-#include "gnc-trans-props.hpp"
-#include "gnc-csv-tokenizer.hpp"
-#include "gnc-fw-tokenizer.hpp"
-#include "gnc-csv-trans-import-settings.hpp"
+#include "gnc-import-tx.hpp"
+#include "gnc-imp-props-tx.hpp"
+#include "gnc-tokenizer-csv.hpp"
+#include "gnc-tokenizer-fw.hpp"
+#include "gnc-imp-settings-csv-tx.hpp"
 
 G_GNUC_UNUSED static QofLogModule log_module = GNC_MOD_IMPORT;
 
@@ -404,7 +404,7 @@ void GncTxImport::tokenize (bool guessColTypes)
     /* If it failed, generate an error. */
     if (m_parsed_lines.size() == 0)
     {
-        throw (std::range_error ("Tokenizing failed."));
+        throw (std::range_error (N_("There was an error parsing the file.")));
         return;
     }
 
@@ -907,9 +907,13 @@ GncTxImport::accounts ()
             continue;
 
         auto col_strs = std::get<PL_INPUT>(parsed_line);
-        if ((acct_col_it != m_settings.m_column_types.end()) && !col_strs[acct_col].empty())
+        if ((acct_col_it != m_settings.m_column_types.end()) &&
+            (acct_col < col_strs.size()) &&
+            !col_strs[acct_col].empty())
             accts.insert(col_strs[acct_col]);
-        if ((tacct_col_it != m_settings.m_column_types.end()) && !col_strs[tacct_col].empty())
+        if ((tacct_col_it != m_settings.m_column_types.end()) &&
+            (tacct_col < col_strs.size()) &&
+            !col_strs[tacct_col].empty())
             accts.insert(col_strs[tacct_col]);
     }
 

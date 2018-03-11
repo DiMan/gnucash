@@ -1,5 +1,5 @@
 /*******************************************************************\
- * gnc-csv-price-import-settings.cpp -- Price CSV Import Settings   *
+ * gnc-imp-settings-csv-price.cpp -- Price CSV Import Settings      *
  *                                                                  *
  * Copyright (C) 2017 Robert Fewell                                 *
  *                                                                  *
@@ -20,14 +20,14 @@
  * 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652       *
  * Boston, MA  02110-1301,  USA       gnu@gnu.org                   *
 \********************************************************************/
-/** @file gnc-csv-price-import-settings.cpp
+/** @file gnc-imp-settings-csv-price.cpp
     @brief CSV Import Settings
     @author Copyright (c) 2014 Robert Fewell
     @author Copyright (c) 2016 Geert Janssens
 */
 
-#include "gnc-csv-import-settings.hpp"
-#include "gnc-csv-price-import-settings.hpp"
+#include "gnc-imp-settings-csv.hpp"
+#include "gnc-imp-settings-csv-price.hpp"
 #include <sstream>
 
 extern "C"
@@ -42,7 +42,7 @@ extern "C"
 #include "gnc-ui-util.h"
 }
 
-const std::string settings_type{"PRICE"};
+constexpr auto group_prefix = "Import csv,price - ";
 
 #define CSV_COL_TYPES    "ColumnTypes"
 
@@ -57,7 +57,6 @@ static std::shared_ptr<CsvPriceImpSettings> create_int_no_preset(void)
 {
     auto preset = std::make_shared<CsvPriceImpSettings>();
     preset->m_name = get_no_settings();
-    preset->m_settings_type = settings_type;
 
     return preset;
 }
@@ -101,7 +100,7 @@ const preset_vec_price& get_import_presets_price (void)
     for (gsize i=0; i < grouplength; i++)
     {
         auto group = std::string(groups[i]);
-        auto gp = get_prefix() + settings_type + " - ";
+        auto gp = std::string {group_prefix};
         auto pos = group.find(gp);
         if (pos == std::string::npos)
             continue;
@@ -125,7 +124,6 @@ const preset_vec_price& get_import_presets_price (void)
     for (auto preset_name : preset_names)
     {
         auto preset = std::make_shared<CsvPriceImpSettings>();
-        preset->m_settings_type = settings_type;
         preset->m_name = preset_name;
         preset->load();
         presets_price.push_back(preset);
@@ -147,10 +145,10 @@ CsvPriceImpSettings::load (void)
     GError *key_error = nullptr;
     m_load_error = false;
     auto keyfile = gnc_state_get_current ();
-    auto group = get_prefix() + m_settings_type + " - " + m_name;
+    auto group = get_group_prefix() + m_name;
 
     // Start Loading the settings
-    m_load_error = load_common(); // load the common settings
+    m_load_error = CsvImportSettings::load(); // load the common settings
 
     gchar *key_char = g_key_file_get_string (keyfile, group.c_str(), CSV_TO_CURR, &key_error);
     if (key_char && *key_char != '\0')
@@ -210,13 +208,13 @@ CsvPriceImpSettings::save (void)
     }
 
     auto keyfile = gnc_state_get_current ();
-    auto group = get_prefix() + m_settings_type + " - " + m_name;
+    auto group = get_group_prefix() + m_name;
 
     // Drop previous saved settings with this name
     g_key_file_remove_group (keyfile, group.c_str(), nullptr);
 
     // Start Saving the settings
-    bool error = save_common(); // save the common settings
+    bool error = CsvImportSettings::save(); // save the common settings
 
     if (error)
         return error;
@@ -254,5 +252,11 @@ CsvPriceImpSettings::remove (void)
     if (preset_is_reserved_name (m_name))
         return;
 
-    remove_common();
+    CsvImportSettings::remove();
+}
+
+const char*
+CsvPriceImpSettings::get_group_prefix (void)
+{
+    return group_prefix;
 }

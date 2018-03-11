@@ -1,5 +1,5 @@
 /*******************************************************************\
- * gnc-csv-import-settings.hpp -- Save and Load CSV Import Settings *
+ * gnc-imp-settings-csv.hpp -- Save and Load CSV Import Settings *
  *                                                                  *
  * Copyright (C) 2014 Robert Fewell                                 *
  *                                                                  *
@@ -20,7 +20,7 @@
  * 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652       *
  * Boston, MA  02110-1301,  USA       gnu@gnu.org                   *
 \********************************************************************/
-/** @file gnc-csv-import-settings.hpp
+/** @file gnc-imp-settings-csv.hpp
     @brief CSV Import Settings
     @author Copyright (c) 2014 Robert Fewell
     @author Copyright (c) 2016 Geert Janssens
@@ -60,19 +60,17 @@ struct CsvImportSettings
  *
  *  @return true if there was a problem in saving.
  */
-bool save_common (void);
+bool save (void);
 
 /** Load the widget properties from a key File.
  *
  *  @return true if there was a problem.
  */
-bool load_common (void);
+bool load (void);
 
 /** Remove the preset from the state file.
  */
-void remove_common (void);
-
-std::string   m_settings_type;                // Settings Type, TRANS, PRICE etc.
+void remove (void);
 
 // Common Settings
 std::string   m_name;                         // Name given to this preset by the user
@@ -86,11 +84,13 @@ bool          m_skip_alt_lines;               // Skip alternate rows
 std::string   m_separators;                   // Separators for csv format
 bool          m_load_error;                   // Was there an error while parsing the state file ?
 std::vector<uint32_t> m_column_widths;        // The Column widths
+
+protected:
+    virtual const char* get_group_prefix (void) = 0;
 };
 
 std::string get_no_settings (void);
 std::string get_gnc_exp (void);
-std::string get_prefix (void);
 
 /** Check whether name can be used as a preset name.
  *  The names of the internal presets are considered reserved.
