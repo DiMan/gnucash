@@ -13,14 +13,14 @@ ENABLE_TESTING()
 # Version number of gnucash
 SET (GNUCASH_MAJOR_VERSION 2)
 SET (GNUCASH_MINOR_VERSION 7)
-SET (GNUCASH_MICRO_VERSION 6)
+SET (GNUCASH_MICRO_VERSION 8)
 SET (GNUCASH_NANO_VERSION 0)
 SET (VERSION "${GNUCASH_MAJOR_VERSION}.${GNUCASH_MINOR_VERSION}.${GNUCASH_MICRO_VERSION}")
 SET (GNUCASH_LATEST_STABLE_SERIES 2.6)
 
 SET (PACKAGE gnucash)
 SET (PACKAGE_NAME GnuCash)
-SET (PACKAGE_VERSION 2.7.6)
+SET (PACKAGE_VERSION 2.7.8)
 SET (PACKAGE_BUGREPORT gnucash-devel@gnucash.org)
 SET (PACKAGE_TARNAME ${PACKAGE})
 SET (PACKAGE_STRING "${PACKAGE_NAME} ${PACKAGE_VERSION}")
@@ -70,6 +70,9 @@ OPTION (ALLOW_OLD_GETTEXT "allow to configure build with a gettext version older
 # ############################################################
 
 # These are also settable from the command line in a similar way.
+
+# Use gsettings-desktop-schemas for a better integration with GNOME
+SET(COMPILE_GSCHEMAS ON CACHE BOOL "Compile the GSettings schema")
 
 SET(GNUCASH_BUILD_ID "" CACHE STRING "Overrides the GnuCash build identification (Build ID) which defaults to a description of the vcs commit from which gnucash is built. Distributions may want to insert a package management based version number instead")
 # GENERATE_SWIG_WRAPPERS - Controls whether to generate the swig wrappers for guile and python. If not set the wrappers will only be generated when building from a git worktree, commented out here, but will be evaluated later on in this file
