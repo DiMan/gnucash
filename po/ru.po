@@ -10,13 +10,14 @@
 # Dmitry Pavlov  <zeldigas@gmail.com>, 2014.
 # ashed <craysy@gmail.com>, 2017
 # Dmitriy Mangul <dimang.freetime@gmail.com>, 2017, 2018
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 2.7.3\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2018-03-26 21:02+0200\n"
-"PO-Revision-Date: 2018-02-13 22:00+0100\n"
+"PO-Revision-Date: 2018-03-26 21:20+0200\n"
 "Last-Translator: Dmitriy Mangul <dimang.freetime@gmail.com>\n"
 "Language-Team: russian <gnucash-ru@googlegroups.com>\n"
 "Language: ru\n"
@@ -5123,7 +5124,7 @@ msgstr ""
 #: gnucash/gnome/gnc-plugin-page-register.c:2688
 #: gnucash/report/standard-reports/transaction.scm:56
 msgid "Transaction Report"
-msgstr "Отчёт о проводке"
+msgstr "Отчёт о проводках"
 
 #: gnucash/gnome/gnc-plugin-page-register.c:3084
 #: gnucash/gnome/gnc-split-reg.c:795
@@ -19212,9 +19213,8 @@ msgid "Export the Transactions to a CSV file"
 msgstr "Экспортировать проводки в CSV файл"
 
 #: gnucash/import-export/csv-exp/gnc-plugin-csv-export.c:64
-#, fuzzy
 msgid "Export _Active Register to CSV..."
-msgstr "Экспорт _иерархии счетов в CSV..."
+msgstr "Экспорт текущего журнала в CSV..."
 
 #: gnucash/import-export/csv-exp/gnc-plugin-csv-export.c:65
 #, fuzzy
@@ -19784,9 +19784,8 @@ msgstr ""
 
 #. Menu entry with label and tooltip
 #: gnucash/import-export/customer-import/gnc-plugin-customer-import.c:58
-#, fuzzy
 msgid "Import _Customers & Vendors..."
-msgstr "Импорт клиентов и поставщиков"
+msgstr "Импорт клиентов и поставщиков..."
 
 #: gnucash/import-export/customer-import/gnc-plugin-customer-import.c:58
 #, fuzzy
@@ -27922,7 +27921,7 @@ msgstr "Строка для дополнительной информации о
 #: gnucash/report/stylesheets/stylesheet-head-or-tail.scm:109
 #: gnucash/report/stylesheets/stylesheet-head-or-tail.scm:267
 msgid "Show preparer info at bottom"
-msgstr "Показывать информацию об авторе внизу"
+msgstr "Показывать информацию об авторе снизу"
 
 #: gnucash/report/stylesheets/stylesheet-head-or-tail.scm:110
 msgid "Per default the preparer info will be shown before the report data."
@@ -29382,7 +29381,7 @@ msgid ""
 "Business_Features_Issues#Double_posting"
 msgstr ""
 "Пожалуйста удалите эту проводку. Объяснение: http://wiki.gnucash.org/wiki/"
-"Business_Features_Issues#Double_Posting"
+"Business_Features_Issues#Double_posting"
 
 #: libgnucash/engine/ScrubBusiness.c:591
 #, c-format
