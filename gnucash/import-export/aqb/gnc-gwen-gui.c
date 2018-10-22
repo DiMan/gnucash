@@ -1126,6 +1126,7 @@ messagebox_cb(GWEN_GUI *gwen_gui, guint32 flags, const gchar *title,
     GtkWidget *dialog;
     GtkWidget *vbox;
     GtkWidget *label;
+    GtkWidget *label_1, *label_2;
     gchar *raw_text;
     gint result;
 
@@ -1138,14 +1139,45 @@ messagebox_cb(GWEN_GUI *gwen_gui, guint32 flags, const gchar *title,
                  GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
                  b1, 1, b2, 2, b3, 3, (gchar*) NULL);
 
+    // TODO: den Text in "raw_text" ersetzen - Übersetzung für Text einfügen
     raw_text = strip_html(g_strdup(text));
     label = gtk_label_new(raw_text);
     g_free(raw_text);
+
+    //label_1 = gtk_label_new( N_("The following certificate has been received:") );
+    //label_2 = gtk_label_new( N_("Do you wish to accept this certificate?") );
+
+    g_print("...Eigenschaften anpassen\n");
     gtk_label_set_justify(GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+    //gtk_label_set_justify(GTK_LABEL(label_1), GTK_JUSTIFY_LEFT);
+    //gtk_label_set_justify(GTK_LABEL(label_2), GTK_JUSTIFY_LEFT);
+    //gtk_label_set_xalign(GTK_LABEL(label), 0);
+    //gtk_label_set_xalign(GTK_LABEL(label_1), 0);
+    //gtk_label_set_xalign(GTK_LABEL(label_2), 0);
+
+
+    g_print("...allow the user to select text from the label, for copy-and-paste.\n");
+    gtk_label_set_selectable(GTK_LABEL(label), TRUE);
+
+    g_print("...Toggles line wrapping within the GtkLabel widget.\n");
+    gtk_label_set_line_wrap(GTK_LABEL(label), TRUE);
+    gtk_label_set_line_wrap_mode(GTK_LABEL(label), PANGO_WRAP_CHAR);
+    gtk_label_set_width_chars(GTK_LABEL(label), 75);     // length of the line with SHA1
+    gtk_label_set_max_width_chars(GTK_LABEL(label), 75); // half the length of the line with SHA512
+
+    //gtk_widget_modify_font (label, pango_font_description_from_string ("Monospace") );
+
     vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_box_set_homogeneous (GTK_BOX (vbox), TRUE);
+    //gtk_box_set_homogeneous (GTK_BOX (vbox), FALSE);
     gtk_container_set_border_width(GTK_CONTAINER(vbox), 5);
+
+    //gtk_container_add(GTK_CONTAINER(vbox), label_1);
+    //gtk_container_add(GTK_CONTAINER(vbox), gtk_label_new("") );
     gtk_container_add(GTK_CONTAINER(vbox), label);
+    //gtk_container_add(GTK_CONTAINER(vbox), gtk_label_new("") );
+    //gtk_container_add(GTK_CONTAINER(vbox), label_2);
+
     gtk_container_set_border_width(GTK_CONTAINER(dialog), 5);
     gtk_container_add(GTK_CONTAINER(gtk_dialog_get_content_area (GTK_DIALOG(dialog))), vbox);
     gtk_widget_show_all(dialog);
