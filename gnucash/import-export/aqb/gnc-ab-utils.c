@@ -60,16 +60,11 @@ static AB_BANKING *gnc_AB_BANKING = NULL;
 static gint gnc_AB_BANKING_refcount = 0;
 
 static gpointer join_ab_strings_cb(const gchar *str, gpointer user_data);
-static Account *gnc_ab_accinfo_to_gnc_acc(GtkWidget *parent,
-    AB_IMEXPORTER_ACCOUNTINFO *account_info);
-static Account *gnc_ab_txn_to_gnc_acc(GtkWidget *parent,
-    const AB_TRANSACTION *transaction);
-static const AB_TRANSACTION *txn_transaction_cb(
-    const AB_TRANSACTION *element, gpointer user_data);
-static AB_IMEXPORTER_ACCOUNTINFO *txn_accountinfo_cb(
-    AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data);
-static AB_IMEXPORTER_ACCOUNTINFO *bal_accountinfo_cb(
-    AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data);
+static Account *gnc_ab_accinfo_to_gnc_acc(GtkWidget *parent, AB_IMEXPORTER_ACCOUNTINFO *account_info);
+static Account *gnc_ab_txn_to_gnc_acc(GtkWidget *parent, const AB_TRANSACTION *transaction);
+static const AB_TRANSACTION *txn_transaction_cb(const AB_TRANSACTION *element, gpointer user_data);
+static AB_IMEXPORTER_ACCOUNTINFO *txn_accountinfo_cb(AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data);
+static AB_IMEXPORTER_ACCOUNTINFO *bal_accountinfo_cb(AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data);
 
 struct _GncABImExContextImport
 {
@@ -510,13 +505,20 @@ gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc)
     xaccTransBeginEdit(gnc_trans);
 
     /* Date / Time */
-    valuta_date = AB_Transaction_GetValutaDate(ab_trans);
+    valuta_date = AB_Transaction_GetValutaDate(ab_trans);   // ValutaDate - Wertstellungsdatum
+    //valuta_date = AB_Transaction_GetDate(ab_trans);       // alternativ Buchungsdatum
+    
+    // prüfen, ob das Wertstellungsdatum vorliegt
     if (!valuta_date)
     {
+        // Buchungsdatum auslesen
         const GNC_GWEN_DATE *normal_date = AB_Transaction_GetDate(ab_trans);
+        // Falls das Buchungsdatum definiert, ist dann dieses Datum auswählen
         if (normal_date)
             valuta_date = normal_date;
     }
+    
+    // ???
     if (valuta_date)
     {
 #ifdef AQBANKING6
@@ -565,6 +567,7 @@ gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc)
     if (fitid && *fitid)
         gnc_import_set_split_online_id(split, fitid);
 
+    // TODO: Überarbeiten
     /* FIXME: Extract function */
     {
         /* Amount into the split */

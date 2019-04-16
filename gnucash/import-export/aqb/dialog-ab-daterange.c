@@ -48,6 +48,7 @@ struct _DaterangeInfo
     GtkWidget *to_dateedit;
 };
 
+// Hier abfragen
 gboolean
 gnc_ab_enter_daterange(GtkWidget *parent,
                        const char *heading,
@@ -87,19 +88,16 @@ gnc_ab_enter_daterange(GtkWidget *parent,
     info.enter_to_button  = GTK_WIDGET(gtk_builder_get_object (builder, "enter_to_button"));
 
     info.from_dateedit = gnc_date_edit_new (*from_date, FALSE, FALSE);
-    gtk_container_add(GTK_CONTAINER(gtk_builder_get_object (builder, "enter_from_box")),
-                      info.from_dateedit);
+    gtk_container_add(GTK_CONTAINER(gtk_builder_get_object (builder, "enter_from_box")), info.from_dateedit);
     gtk_widget_show(info.from_dateedit);
 
     info.to_dateedit = gnc_date_edit_new (*to_date, FALSE, FALSE);
-    gtk_container_add(GTK_CONTAINER(gtk_builder_get_object (builder, "enter_to_box")),
-                      info.to_dateedit);
+    gtk_container_add(GTK_CONTAINER(gtk_builder_get_object (builder, "enter_to_box")), info.to_dateedit);
     gtk_widget_show(info.to_dateedit);
 
     if (*last_retv_date)
     {
-        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(last_retrieval_button),
-                                     TRUE);
+        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(last_retrieval_button), TRUE);
     }
     else
     {
@@ -123,13 +121,10 @@ gnc_ab_enter_daterange(GtkWidget *parent,
     if (result == GTK_RESPONSE_OK)
     {
         *from_date = gnc_date_edit_get_date(GNC_DATE_EDIT(info.from_dateedit));
-        *last_retv_date = gtk_toggle_button_get_active(
-                              GTK_TOGGLE_BUTTON(last_retrieval_button));
-        *first_possible_date = gtk_toggle_button_get_active(
-                                   GTK_TOGGLE_BUTTON(first_button));
+        *last_retv_date = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(last_retrieval_button));
+        *first_possible_date = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(first_button));
         *to_date = gnc_date_edit_get_date (GNC_DATE_EDIT(info.to_dateedit));
-        *to_now = gtk_toggle_button_get_active(
-                      GTK_TOGGLE_BUTTON(now_button));
+        *to_now = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(now_button));
     }
 
     g_object_unref(G_OBJECT(builder));

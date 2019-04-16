@@ -102,8 +102,8 @@ void gnc_ab_set_account_uid(Account *a, guint32 uid);
 time64 gnc_ab_get_account_trans_retrieval(const Account *a);
 
 /**
- * Set the time of last online transaction retrieval for Account @a a.  The
- * account will be marked as "dirty".
+ * Set the time of last online transaction retrieval for Account @a a to @a time.
+ * The Account will be marked as "dirty".
  *
  * @param a Account
  * @param time Retrieval time
